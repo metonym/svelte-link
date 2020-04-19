@@ -37,6 +37,14 @@ yarn add -D svelte-link
 <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</Link>
 ```
 
+### Prefetch
+
+Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), this component will make a GET request if the non-standard `rel="prefetch"` is present.
+
+```html
+<Link href="about" rel="prefetch">About</Link>
+```
+
 ### Disabled
 
 Setting `disabled` to `true` will render a `span` tag.

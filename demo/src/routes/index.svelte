@@ -65,8 +65,8 @@
 </svelte:head>
 
 <Link
-  href="https://github.com/metonym/svelte-link"
-  target="_blank"
+  href="about"
+  rel="prefetch"
   {disabled}
   on:mouseover={() => {
     logEvent('mouseover');
@@ -86,7 +86,7 @@
   on:keydown={() => {
     logEvent('keydown');
   }}>
-  GitHub
+  About
 </Link>
 
 <div class="buttons">
