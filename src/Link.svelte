@@ -3,30 +3,27 @@
 </script>
 
 <script>
+  /** @restProps {a | span} */
+
   export let href = "javascript:void(0);";
   export let disabled = false;
   export let outbound = false;
-  export let target = undefined; // string
-  export let rel = undefined; // string
+
+  /** @type {string} */
+  export let target = undefined;
+
+  /** @type {string} */
+  export let rel = undefined;
 
   async function prefetch() {
-    if (fetched.has(href)) {
-      return;
-    }
-
+    if (fetched.has(href)) return;
     const response = await fetch(href);
-
-    if (response.ok) {
-      fetched.set(href, true);
-    }
+    if (response.ok) fetched.set(href, true);
   }
 
   $: if (outbound) {
     target = "_blank";
-
-    if (rel === undefined) {
-      rel = "noopener noreferrer";
-    }
+    if (rel === undefined) rel = "noopener noreferrer";
   }
 </script>
 
@@ -52,9 +49,7 @@
     on:mouseover
     on:mouseenter
     on:mouseenter={() => {
-      if (rel === 'prefetch') {
-        prefetch();
-      }
+      if (rel === 'prefetch') prefetch();
     }}
     on:mouseout
     on:focus
