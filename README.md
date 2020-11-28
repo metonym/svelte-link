@@ -9,11 +9,13 @@
 
 ```bash
 yarn add -D svelte-link
+# OR
+npm i -D svelte-link
 ```
 
 ## Usage
 
-```html
+```svelte
 <script>
   import Link from "svelte-link";
 </script>
@@ -23,7 +25,7 @@ yarn add -D svelte-link
 
 ### Preventing default behavior
 
-```html
+```svelte
 <Link href="https://github.com/" on:click="{(e) => { e.preventDefault(); }}">GitHub</Link>
 ```
 
@@ -31,7 +33,7 @@ yarn add -D svelte-link
 
 `outbound` is an alias for setting `target="_blank"`. If `rel` is not specified for outbound links, [`rel="noopener noreferrer"` is set](https://developers.google.com/web/tools/lighthouse/audits/noopener).
 
-```html
+```svelte
 <Link href="https://github.com/" outbound>GitHub</Link>
 <!-- is the same as -->
 <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</Link>
@@ -41,28 +43,28 @@ yarn add -D svelte-link
 
 Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), this component will make a GET request if the non-standard `rel="prefetch"` is present.
 
-```html
+```svelte
 <Link href="about" rel="prefetch">About</Link>
 ```
 
 ### Disabled
 
-Setting `disabled` to `true` will render a `span` tag.
+Setting `disabled` to `true` will render a `span` element instead of an anchor tag.
 
-```html
+```svelte
 <Link href="https://github.com/" disabled>GitHub</Link>
 <!-- <span>GitHub</span> -->
 ```
 
 ## API
 
-| Property name | Value                                       |
-| :------------ | :------------------------------------------ |
-| href          | `string` (default: `"javascript:void(0);"`) |
-| disabled      | `boolean` (default: `false`)                |
-| outbound      | `boolean` (default: `false`)                |
-| target        | `string` (default: `undefined`)             |
-| rel           | `string` (default: `undefined`)             |
+| Prop name | Value                                       |
+| :-------- | :------------------------------------------ |
+| href      | `string` (default: `"javascript:void(0);"`) |
+| disabled  | `boolean` (default: `false`)                |
+| outbound  | `boolean` (default: `false`)                |
+| target    | `string` (default: `undefined`)             |
+| rel       | `string` (default: `undefined`)             |
 
 ## Forwarded events
 
@@ -80,7 +82,7 @@ Setting `disabled` to `true` will render a `span` tag.
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-link.svg?color=blue
+[npm]: https://img.shields.io/npm/v/svelte-link?color=0366d6&style=for-the-badge
 [npm-url]: https://npmjs.com/package/svelte-link
-[build]: https://travis-ci.com/metonym/svelte-link.svg?branch=master
+[build]: https://img.shields.io/travis/com/metonym/svelte-link?color=28a745&style=for-the-badge
 [build-badge]: https://travis-ci.com/metonym/svelte-link

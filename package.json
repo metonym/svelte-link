@@ -4,21 +4,22 @@
   "license": "MIT",
   "description": "Link component for Svelte",
   "author": "Eric Liu (https://github.com/metonym)",
-  "svelte": "src/index.js",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
+  "svelte": "./src/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./types/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "prepack": "rollup -c"
-  },
-  "peerDependencies": {
-    "svelte": "^3.20.x"
+    "dev": "rollup -cw",
+    "build": "rollup -c",
+    "deploy": "npx gh-pages -d dist",
+    "prepack": "BUNDLE=true rollup -c"
   },
   "devDependencies": {
-    "rollup": "^2.6.1",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.2.1",
-    "svelte": "^3.20.x"
+    "rollup": "^2.33.3",
+    "rollup-plugin-svelte": "^7.0.0",
+    "svelte": "^3.30.0",
+    "svelte-readme": "^1.0.0"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   ],
   "files": [
     "lib",
-    "src"
+    "src",
+    "types"
   ]
 }
