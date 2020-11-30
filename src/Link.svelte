@@ -23,12 +23,12 @@
     if (response.ok) fetched.set(href, true);
   }
 
-  $: if (window && window.URL) {
+  $: if (typeof window !== 'undefined') {
     const isExternal =
       new URL(href, `${location.protocol}//${location.host}`).host !==
       location.host;
 
-    if (isExternal && typeof outbound === 'undefined') {
+    if (isExternal && outbound === undefined) {
       outbound = true;
     }
   }
