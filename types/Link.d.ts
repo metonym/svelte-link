@@ -5,7 +5,7 @@ export interface LinkProps
   extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["a"]>,
     svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
   /**
-   * @default "javascript:void(0);"
+   * @default 'javascript:void(0);'
    */
   href?: string;
 
@@ -14,9 +14,6 @@ export interface LinkProps
    */
   disabled?: boolean;
 
-  /**
-   * @default false
-   */
   outbound?: boolean;
 
   target?: string;

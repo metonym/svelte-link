@@ -63,7 +63,7 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 | :-------- | :------------------------------------------ |
 | href      | `string` (default: `"javascript:void(0);"`) |
 | disabled  | `boolean` (default: `false`)                |
-| outbound  | `boolean` (default: `undefiend`)            |
+| outbound  | `boolean` (default: `undefined`)            |
 | target    | `string` (default: `undefined`)             |
 | rel       | `string` (default: `undefined`)             |
 
