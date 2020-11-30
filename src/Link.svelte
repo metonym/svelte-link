@@ -5,9 +5,11 @@
 <script>
   /** @restProps {a | span} */
 
-  export let href = "javascript:void(0);";
+  export let href = 'javascript:void(0);';
   export let disabled = false;
-  export let outbound = false;
+
+  /** @type {boolean} */
+  export let outbound = undefined;
 
   /** @type {string} */
   export let target = undefined;
@@ -21,9 +23,19 @@
     if (response.ok) fetched.set(href, true);
   }
 
+  $: if (window && window.URL) {
+    const isExternal =
+      new URL(href, `${location.protocol}//${location.host}`).host !==
+      location.host;
+
+    if (isExternal && typeof outbound === 'undefined') {
+      outbound = true;
+    }
+  }
+
   $: if (outbound) {
-    target = "_blank";
-    if (rel === undefined) rel = "noopener noreferrer";
+    target = '_blank';
+    if (rel === undefined) rel = 'noopener noreferrer';
   }
 </script>
 
