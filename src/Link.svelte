@@ -28,7 +28,7 @@
       new URL(href, `${location.protocol}//${location.host}`).host !==
       location.host;
 
-    if (isExternal && typeof outbound === 'undefined') {
+    if (isExternal && outbound === undefined) {
       outbound = true;
     }
   }
