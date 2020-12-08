@@ -77,6 +77,10 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 - on:blur
 - on:keydown
 
+## TypeScript support
+
+To use this component with TypeScript, you will need Svelte version 3.31 or greater.
+
 ## [Changelog](CHANGELOG.md)
 
 ## License

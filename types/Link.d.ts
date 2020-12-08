@@ -1,5 +1,5 @@
 /// <reference types="svelte" />
-import { SvelteComponent } from "svelte";
+import { SvelteComponentTyped } from "svelte";
 
 export interface LinkProps
   extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["a"]>,
@@ -21,7 +21,7 @@ export interface LinkProps
   rel?: string;
 }
 
-export default class Link extends SvelteComponent<
+export default class Link extends SvelteComponentTyped<
   LinkProps,
   {
     click: WindowEventMap["click"];
