@@ -4,6 +4,8 @@
 
 > Link component for Svelte.
 
+<!-- TOC -->
+
 ## Install
 
 ```bash
@@ -67,7 +69,7 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 | target    | `string` (default: `undefined`)             |
 | rel       | `string` (default: `undefined`)             |
 
-## Forwarded events
+### Forwarded events
 
 - on:click
 - on:mouseover
