@@ -1,8 +1,10 @@
 # svelte-link
 
-[![NPM][npm]][npm-url] [![Build][build]][build-badge]
+[![NPM][npm]][npm-url]
 
-> Link component for Svelte.
+> Anchor link component for Svelte.
+
+<!-- REPO_URL -->
 
 <!-- TOC -->
 
@@ -16,6 +18,9 @@ npm i -D svelte-link
 
 ## Usage
 
+### Basic
+
+<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Link from "svelte-link";
@@ -23,43 +28,54 @@ npm i -D svelte-link
 
 <Link href="https://github.com/">GitHub</Link>
 ```
+<!-- prettier-ignore-end -->
 
-### Preventing default behavior
+### Preventing the default behavior
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Link href="https://github.com/" on:click="{(e) => { e.preventDefault(); }}">GitHub</Link>
 ```
+<!-- prettier-ignore-end -->
 
 ### Outbound links
 
 `outbound` is an alias for setting `target="_blank"`. If `rel` is not specified for outbound links, [`rel="noopener noreferrer"` is set](https://developers.google.com/web/tools/lighthouse/audits/noopener).
 
-If `outbound` is unset, it automatically defaults to `true` when `href` points to an external URL. You can override this behaviour by explicitly setting `outbound` to `false`.
+`outbound` defaults to `true` if `href` points to an external URL. You can override this behaviour by explicitly setting `outbound` to `false`.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Link href="https://github.com/" outbound>GitHub</Link>
 <!-- is the same as -->
 <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</Link>
 ```
+<!-- prettier-ignore-end -->
 
 ### Prefetch
 
-Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), this component will make a GET request if the non-standard `rel="prefetch"` is present.
+Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), if the non-standard `rel="prefetch"` is present, this component will make a GET request to the `href` value when the user hovers over the link.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Link href="about" rel="prefetch">About</Link>
 ```
+<!-- prettier-ignore-end -->
 
 ### Disabled
 
 Setting `disabled` to `true` will render a `span` element instead of an anchor tag.
 
+<!-- prettier-ignore-start -->
 ```svelte
-<Link href="https://github.com/" disabled>GitHub</Link>
+<Link disabled href="https://github.com/">GitHub</Link>
 <!-- <span>GitHub</span> -->
 ```
+<!-- prettier-ignore-end -->
 
 ## API
+
+### Props
 
 | Prop name | Value                                       |
 | :-------- | :------------------------------------------ |
@@ -79,17 +95,17 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 - on:blur
 - on:keydown
 
-## TypeScript support
+## TypeScript Support
 
-To use this component with TypeScript, you will need Svelte version 3.31 or greater.
+Svelte version 3.31 or greater is required to use this component with TypeScript.
 
-## [Changelog](CHANGELOG.md)
+## Changelog
+
+[Changelog](CHANGELOG.md)
 
 ## License
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-link?color=0366d6&style=for-the-badge
+[npm]: https://img.shields.io/npm/v/svelte-link?style=for-the-badge&color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-link
-[build]: https://img.shields.io/travis/com/metonym/svelte-link?color=28a745&style=for-the-badge
-[build-badge]: https://travis-ci.com/metonym/svelte-link
