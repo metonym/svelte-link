@@ -720,10 +720,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.2.3.tgz#bf39879f8cecd380a8f75553d169335cc9395497"
-  integrity sha512-EAuxtwjpTL2K7MHCDKUtt8YeDhM8sf8ZHTdODfE7yYb53nDD8u+p5I5Ub77VPSqgHUlaJh66ieB14rrLeA9YxA==
+svelte-check@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.3.0.tgz#1fda3c3588f5f09347dbba06eaf40576095ba3d7"
+  integrity sha512-FMLZr/wv9S0MzCALo9BlHYyu1wlgXRdHWSjXDiknhraL9Igm0EVb00/tR6CMJ7j4q2kphRIEYcSRQJ7AtXHk+g==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -744,10 +744,10 @@ svelte-preprocess@^4.0.0:
     detect-indent "^6.0.0"
     strip-indent "^3.0.0"
 
-svelte-readme@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/svelte-readme/-/svelte-readme-3.0.0.tgz#566a525ad15a25fba2af7add77e5843653f39b22"
-  integrity sha512-0cT04B0XrhEdlhm3Ks1TSSB4ZA1TkNaLAekL1ORaEVVkMlh+bKjwwyNk2bkrFnHJAxbXc7rU5AZnHP2joz1JMw==
+svelte-readme@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/svelte-readme/-/svelte-readme-3.1.0.tgz#08455bfceb35669d52d6a014a29695db989e9f45"
+  integrity sha512-fNf8b2T5LfWFWayYSvo04oq/44f9CLTM74buIey5WhgVjPy/ve7Z9HtwVX2JtvzxUykAYe9VdSZaEtNuzJITkA==
   dependencies:
     "@rollup/plugin-node-resolve" "^11.1.0"
     "@rollup/plugin-virtual" "^2.0.3"
