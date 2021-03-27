@@ -2,9 +2,9 @@
 
 [![NPM][npm]][npm-url]
 
-> Anchor link component for Svelte.
-
 <!-- REPO_URL -->
+
+> Anchor link component for Svelte.
 
 <!-- TOC -->
 
@@ -20,7 +20,6 @@ npm i -D svelte-link
 
 ### Basic
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Link from "svelte-link";
@@ -28,15 +27,19 @@ npm i -D svelte-link
 
 <Link href="https://github.com/">GitHub</Link>
 ```
-<!-- prettier-ignore-end -->
 
 ### Preventing the default behavior
 
-<!-- prettier-ignore-start -->
 ```svelte
-<Link href="https://github.com/" on:click="{(e) => { e.preventDefault(); }}">GitHub</Link>
+<Link
+  href="https://github.com/"
+  on:click={(e) => {
+    e.preventDefault();
+  }}
+>
+  GitHub
+</Link>
 ```
-<!-- prettier-ignore-end -->
 
 ### Outbound links
 
@@ -44,34 +47,30 @@ npm i -D svelte-link
 
 `outbound` defaults to `true` if `href` points to an external URL. You can override this behaviour by explicitly setting `outbound` to `false`.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Link href="https://github.com/" outbound>GitHub</Link>
 <!-- is the same as -->
-<Link href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</Link>
+<Link href="https://github.com/" target="_blank" rel="noopener noreferrer">
+  GitHub
+</Link>
 ```
-<!-- prettier-ignore-end -->
 
 ### Prefetch
 
 Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), if the non-standard `rel="prefetch"` is present, this component will make a GET request to the `href` value when the user hovers over the link.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Link href="about" rel="prefetch">About</Link>
 ```
-<!-- prettier-ignore-end -->
 
 ### Disabled
 
 Setting `disabled` to `true` will render a `span` element instead of an anchor tag.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Link disabled href="https://github.com/">GitHub</Link>
 <!-- <span>GitHub</span> -->
 ```
-<!-- prettier-ignore-end -->
 
 ## API
 
