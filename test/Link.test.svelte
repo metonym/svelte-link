@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Link from "./types";
+  import Link from "../types";
 </script>
 
 <Link
@@ -29,6 +29,7 @@
   }}
   on:keydown={(e) => {
     console.log(e); // KeyboardEvent
-  }}>
+  }}
+>
   GitHub
 </Link>
