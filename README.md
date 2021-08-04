@@ -8,11 +8,17 @@
 
 <!-- TOC -->
 
-## Install
+## Installation
+
+**Yarn**
 
 ```bash
 yarn add -D svelte-link
-# OR
+```
+
+**NPM**
+
+```bash
 npm i -D svelte-link
 ```
 
@@ -76,13 +82,13 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 
 ### Props
 
-| Prop name | Value                                       |
-| :-------- | :------------------------------------------ |
-| href      | `string` (default: `"javascript:void(0);"`) |
-| disabled  | `boolean` (default: `false`)                |
-| outbound  | `boolean` (default: `undefined`)            |
-| target    | `string` (default: `undefined`)             |
-| rel       | `string` (default: `undefined`)             |
+| Prop name | Type      | Default value           |
+| :-------- | :-------- | :---------------------- |
+| href      | `string`  | `"javascript:void(0);"` |
+| disabled  | `boolean` | `false`                 |
+| outbound  | `boolean` | `undefined`             |
+| target    | `string`  | `undefined`             |
+| rel       | `string`  | `undefined`             |
 
 ### Forwarded events
 
@@ -97,6 +103,8 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 ## TypeScript Support
 
 Svelte version 3.31 or greater is required to use this component with TypeScript.
+
+TypeScript definitions are located in the [types folder](./types).
 
 ## Changelog
 
