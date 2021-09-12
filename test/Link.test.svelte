@@ -1,5 +1,6 @@
 <script lang="ts">
   import Link from "../types";
+  import Link2 from "../types/Link.svelte";
 </script>
 
 <Link
@@ -33,3 +34,5 @@
 >
   GitHub
 </Link>
+
+<Link2 outbound={false} />
