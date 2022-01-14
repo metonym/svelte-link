@@ -39,9 +39,7 @@ npm i -D svelte-link
 ```svelte
 <Link
   href="https://github.com/"
-  on:click={(e) => {
-    e.preventDefault();
-  }}
+  on:click|preventDefault
 >
   GitHub
 </Link>
