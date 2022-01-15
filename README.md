@@ -22,6 +22,12 @@ yarn add -D svelte-link
 npm i -D svelte-link
 ```
 
+**pnpm**
+
+```bash
+pnpm i -D svelte-link
+```
+
 ## Usage
 
 ### Basic
@@ -35,6 +41,8 @@ npm i -D svelte-link
 ```
 
 ### Preventing the default behavior
+
+Because event modifiers cannot be used on Svelte components, use the mouse event in the forwarded `on:click` event to prevent the default behavior.
 
 ```svelte
 <Link
@@ -66,7 +74,7 @@ npm i -D svelte-link
 Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), if the non-standard `rel="prefetch"` is present, this component will make a GET request to the `href` value when the user hovers over the link.
 
 ```svelte
-<Link href="about" rel="prefetch">About</Link>
+<Link href="/about" rel="prefetch">About</Link>
 ```
 
 ### Disabled
@@ -82,13 +90,13 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 
 ### Props
 
-| Prop name | Type      | Default value           |
-| :-------- | :-------- | :---------------------- |
-| href      | `string`  | `"javascript:void(0);"` |
-| disabled  | `boolean` | `false`                 |
-| outbound  | `boolean` | `undefined`             |
-| target    | `string`  | `undefined`             |
-| rel       | `string`  | `undefined`             |
+| Prop     | Type      | Default value           |
+| :------- | :-------- | :---------------------- |
+| href     | `string`  | `"javascript:void(0);"` |
+| disabled | `boolean` | `false`                 |
+| outbound | `boolean` | `undefined`             |
+| target   | `string`  | `undefined`             |
+| rel      | `string`  | `undefined`             |
 
 ### Forwarded events
 
