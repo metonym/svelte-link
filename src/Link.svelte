@@ -3,18 +3,33 @@
 </script>
 
 <script>
-  /** @restProps {a | span} */
+  /** Specify the `href` attribute. */
+  export let href = "javascript:void(0);";
 
-  export let href = 'javascript:void(0);';
+  /**
+   * Set to `true` to disable the link.
+   * A `span` tag will be rendered instead of `a`.
+   */
   export let disabled = false;
 
-  /** @type {boolean} */
+  /**
+   * Set to `true` to set `target="_blank"`
+   * and `rel="noopener noreferrer"`.
+   * @type {boolean}
+   */
   export let outbound = undefined;
 
-  /** @type {string} */
+  /**
+   * Specify the `target` attribute.
+   * @type {"_self" | "_blank" | "_parent" | "_top"}
+   */
   export let target = undefined;
 
-  /** @type {string} */
+  /**
+   * Specify the `rel` attribute.
+   * Set to "prefetch" to fetch the `href` value.
+   * @type {string}
+   */
   export let rel = undefined;
 
   async function prefetch() {
@@ -23,7 +38,7 @@
     if (response.ok) fetched.set(href, true);
   }
 
-  $: if (typeof window !== 'undefined') {
+  $: if (typeof window !== "undefined") {
     const isExternal =
       new URL(href, `${location.protocol}//${location.host}`).host !==
       location.host;
@@ -34,8 +49,8 @@
   }
 
   $: if (outbound) {
-    target = '_blank';
-    if (rel === undefined) rel = 'noopener noreferrer';
+    target = "_blank";
+    if (rel === undefined) rel = "noopener noreferrer";
   }
 </script>
 
@@ -48,7 +63,8 @@
     on:mouseout
     on:focus
     on:blur
-    on:keydown>
+    on:keydown
+  >
     <slot />
   </span>
 {:else}
@@ -61,12 +77,13 @@
     on:mouseover
     on:mouseenter
     on:mouseenter={() => {
-      if (rel === 'prefetch') prefetch();
+      if (rel === "prefetch") prefetch();
     }}
     on:mouseout
     on:focus
     on:blur
-    on:keydown>
+    on:keydown
+  >
     <slot />
   </a>
 {/if}
