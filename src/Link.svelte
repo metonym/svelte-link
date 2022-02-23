@@ -32,6 +32,13 @@
    */
   export let rel = undefined;
 
+  /**
+   * Set to `true` for the link to be active:
+   * - link is given an "active" class
+   * - `aria-current` is set to "page"
+   */
+  export let active = false;
+
   async function prefetch() {
     if (fetched.has(href)) return;
     const response = await fetch(href);
@@ -69,6 +76,8 @@
   </span>
 {:else}
   <a
+    class:active
+    aria-current={active ? "page" : undefined}
     {...$$restProps}
     {href}
     {target}
