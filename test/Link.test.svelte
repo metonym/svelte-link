@@ -7,6 +7,7 @@
   outbound={false}
   disabled={false}
   target="_blank"
+  active
   rel=""
   href="https://github.com/"
   on:click={(e) => {

@@ -63,7 +63,9 @@ Because event modifiers cannot be used on Svelte components, use the mouse event
 
 ```svelte
 <Link href="https://github.com/" outbound>GitHub</Link>
-<!-- is the same as -->
+
+<!-- same as -->
+
 <Link href="https://github.com/" target="_blank" rel="noopener noreferrer">
   GitHub
 </Link>
@@ -77,13 +79,30 @@ Inspired by [Sapper](https://sapper.svelte.dev/docs#prefetch_href), if the non-s
 <Link href="/about" rel="prefetch">About</Link>
 ```
 
-### Disabled
+### Disabled state
 
 Setting `disabled` to `true` will render a `span` element instead of an anchor tag.
 
 ```svelte
 <Link disabled href="https://github.com/">GitHub</Link>
+
 <!-- <span>GitHub</span> -->
+```
+
+### Active state
+
+Set `active` to `true` to signal an active state.
+
+If `true`, the anchor link is given an "active" class with the `aria-current` attribute set to "page."
+
+```svelte no-eval
+<script>
+  import { page } from "$app/stores";
+</script>
+
+<Link href="/" active={$page.url.pathname === "/"}>GitHub</Link>
+
+<!-- <a href="/" class="active" aria-current="page">GitHub</a> -->
 ```
 
 ## API
@@ -97,6 +116,7 @@ Setting `disabled` to `true` will render a `span` element instead of an anchor t
 | outbound | `boolean` | `undefined`             |
 | target   | `string`  | `undefined`             |
 | rel      | `string`  | `undefined`             |
+| active   | `boolean` | `false`                 |
 
 ### Forwarded events
 

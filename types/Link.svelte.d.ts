@@ -36,6 +36,14 @@ export interface LinkProps
    * @default undefined
    */
   rel?: string;
+
+  /**
+   * Set to `true` for the link to be active:
+   * - link is given an "active" class
+   * - `aria-current` is set to "page"
+   * @default false
+   */
+  active?: boolean;
 }
 
 export default class Link extends SvelteComponentTyped<
