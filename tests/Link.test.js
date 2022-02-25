@@ -1,7 +1,5 @@
 import { test, expect, describe, afterEach } from "vitest";
-import userEvent from "@testing-library/user-event";
 import Link from "./Link.test.svelte";
-import { tick } from "svelte";
 
 describe("Link", () => {
   let instance = null;
@@ -12,7 +10,7 @@ describe("Link", () => {
     document.body.innerHTML = "";
   });
 
-  test("Link", async () => {
+  test("Link", () => {
     instance = new Link({
       target: document.body,
     });
