@@ -1,11 +1,19 @@
 <script lang="ts">
-  import Link from "../types";
-  import Link2 from "../types/Link.svelte";
+  import Link from "../src";
+  import Link2 from "../src/Link.svelte";
 </script>
 
+<Link data-basic href="/">Text</Link>
+
+<Link data-outbound href="https://github.com/" outbound>Text</Link>
+
+<Link data-disabled href="/" disabled>Text</Link>
+
+<Link data-active href="/" active>Text</Link>
+
 <Link
-  outbound={false}
-  disabled={false}
+  outbound
+  disabled
   target="_blank"
   active
   rel=""

@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`Link > Link 1`] = `"<a data-basic=\\"true\\" href=\\"/\\">Text</a>"`;
+
+exports[`Link > Link 2`] = `"<a data-outbound=\\"true\\" href=\\"https://github.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Text</a>"`;
+
+exports[`Link > Link 3`] = `"<span data-disabled=\\"true\\">Text</span>"`;
+
+exports[`Link > Link 4`] = `"<a aria-current=\\"page\\" data-active=\\"true\\" href=\\"/\\" class=\\"active\\">Text</a>"`;

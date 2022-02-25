@@ -14,12 +14,17 @@
     "predeploy": "rollup -c",
     "deploy": "npx gh-pages -d dist",
     "prepack": "BUNDLE=true rollup -c",
-    "test": "svelte-check --workspace test"
+    "test": "vitest",
+    "check": "svelte-check --workspace tests"
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "next",
+    "@testing-library/svelte": "^3.0.3",
+    "jsdom": "^19.0.0",
     "svelte": "^3.46.4",
     "svelte-check": "^2.4.5",
-    "svelte-readme": "^3.6.2"
+    "svelte-readme": "^3.6.2",
+    "vitest": "^0.5.5"
   },
   "repository": {
     "type": "git",
