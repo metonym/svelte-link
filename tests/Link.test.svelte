@@ -12,6 +12,8 @@
 <Link data-active href="/" active>Text</Link>
 
 <Link
+  sveltekit:prefetch
+  sveltekit:noscroll
   outbound
   disabled
   target="_blank"
