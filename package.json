@@ -8,7 +8,6 @@
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./types/index.d.ts",
-  "sideEffects": false,
   "scripts": {
     "dev": "rollup -cw",
     "predeploy": "rollup -c",
@@ -18,13 +17,13 @@
     "check": "svelte-check --workspace tests"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "next",
-    "@testing-library/svelte": "^3.0.3",
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.41",
+    "@testing-library/svelte": "^3.1.1",
     "jsdom": "^19.0.0",
-    "svelte": "^3.46.4",
-    "svelte-check": "^2.4.5",
-    "svelte-readme": "^3.6.2",
-    "vitest": "^0.5.5"
+    "svelte": "^3.47.0",
+    "svelte-check": "^2.6.0",
+    "svelte-readme": "^3.6.3",
+    "vitest": "^0.9.3"
   },
   "repository": {
     "type": "git",
@@ -40,7 +39,6 @@
   ],
   "files": [
     "lib",
-    "src",
-    "types"
+    "src"
   ]
 }
