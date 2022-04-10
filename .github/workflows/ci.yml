@@ -3,8 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   build:
@@ -21,5 +20,5 @@ jobs:
       - name: Test and build the library
         run: |
           yarn
-          yarn run check & yarn test run
+          yarn run check & yarn test
           yarn prepack
