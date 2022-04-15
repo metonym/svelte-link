@@ -21,7 +21,7 @@
     "@testing-library/svelte": "^3.1.1",
     "jsdom": "^19.0.0",
     "svelte": "^3.47.0",
-    "svelte-check": "^2.6.0",
+    "svelte-check": "^2.7.0",
     "svelte-readme": "^3.6.3",
     "vitest": "^0.9.3"
   },
