@@ -62,6 +62,7 @@
 </script>
 
 {#if disabled}
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <span
     {...$$restProps}
     on:click
