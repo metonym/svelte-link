@@ -16,16 +16,16 @@ describe("Link", () => {
     });
 
     expect(
-      document.body.querySelector("[data-basic]").outerHTML
+      document.body.querySelector("[data-basic]").outerHTML,
     ).toMatchSnapshot();
     expect(
-      document.body.querySelector("[data-outbound]").outerHTML
+      document.body.querySelector("[data-outbound]").outerHTML,
     ).toMatchSnapshot();
     expect(
-      document.body.querySelector("[data-disabled]").outerHTML
+      document.body.querySelector("[data-disabled]").outerHTML,
     ).toMatchSnapshot();
     expect(
-      document.body.querySelector("[data-active]").outerHTML
+      document.body.querySelector("[data-active]").outerHTML,
     ).toMatchSnapshot();
   });
 });
