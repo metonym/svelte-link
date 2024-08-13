@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Link from "../src";
-  import Link2 from "../src/Link.svelte";
+  import Link from "svelte-link";
+  import Link2 from "svelte-link/Link.svelte";
 </script>
 
 <Link data-basic href="/">Text</Link>
@@ -12,8 +12,6 @@
 <Link data-active href="/" active>Text</Link>
 
 <Link
-  sveltekit:prefetch
-  sveltekit:noscroll
   outbound
   disabled
   target="_blank"

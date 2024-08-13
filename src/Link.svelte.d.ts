@@ -1,9 +1,10 @@
 /// <reference types="svelte" />
-import { SvelteComponentTyped } from "svelte";
+import type { SvelteComponentTyped } from "svelte";
+import type { SvelteHTMLElements } from "svelte/elements";
 
-export interface LinkProps
-  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["a"]>,
-    svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["span"]> {
+type RestProps = SvelteHTMLElements["span"] & SvelteHTMLElements["a"];
+
+export interface LinkProps extends RestProps {
   /**
    * Specify the `href` attribute.
    * @default "javascript:void(0);"
@@ -45,29 +46,7 @@ export interface LinkProps
    */
   active?: boolean;
 
-  /**
-   * SvelteKit attribute to enable data prefetching
-   * if a link is hovered over or touched on mobile.
-   * @see https://kit.svelte.dev/docs/a-options#sveltekit-prefetch
-   * @default false
-   */
-  "sveltekit:prefetch"?: boolean;
-
-  /**
-   * SvelteKit attribute to trigger a full page
-   * reload after the link is clicked.
-   * @see https://kit.svelte.dev/docs/a-options#sveltekit-reload
-   * @default false
-   */
-  "sveltekit:reload"?: boolean;
-
-  /**
-   * SvelteKit attribute to prevent scrolling
-   * after the link is clicked.
-   * @see https://kit.svelte.dev/docs/a-options#sveltekit-noscroll
-   * @default false
-   */
-  "sveltekit:noscroll"?: boolean;
+  [key: `data-${string}`]: any;
 }
 
 export default class Link extends SvelteComponentTyped<
