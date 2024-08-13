@@ -29,11 +29,8 @@
   "bugs": "https://github.com/metonym/svelte-link/issues",
   "keywords": [
     "svelte",
-    "svelte component",
     "link",
+    "prefetch",
     "noopener noreferrer"
-  ],
-  "files": [
-    "src"
   ]
 }
