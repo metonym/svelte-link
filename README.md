@@ -10,22 +10,18 @@
 
 ## Installation
 
-**Yarn**
-
 ```bash
-yarn add -D svelte-link
-```
-
-**NPM**
-
-```bash
+# npm
 npm i -D svelte-link
-```
 
-**pnpm**
-
-```bash
+# pnpm
 pnpm i -D svelte-link
+
+# Bun
+bun i -D svelte-link
+
+# Yarn
+yarn add -D svelte-link
 ```
 
 ## Usage
@@ -127,12 +123,6 @@ If `true`, the anchor link is given an "active" class with the `aria-current` at
 - on:focus
 - on:blur
 - on:keydown
-
-## TypeScript Support
-
-Svelte version 3.31 or greater is required to use this component with TypeScript.
-
-TypeScript definitions are located in the [types folder](./types).
 
 ## Changelog
 
