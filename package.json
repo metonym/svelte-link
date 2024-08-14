@@ -1,6 +1,6 @@
 {
   "name": "svelte-link",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "Anchor link component for Svelte",
   "author": "Eric Liu (https://github.com/metonym)",

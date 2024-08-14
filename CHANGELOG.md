@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0](https://github.com/metonym/svelte-link/releases/tag/v2.0.0) - 2024-08-13
+
+**Breaking Changes**
+
+- Set `type: "module"` in `package.json`
+- Add `exports` map to resolve Vite warning
+- Drop bundled ESM/UMD support
+
+**Fixes**
+
+- Support `data-*` attributes in TypeScript definitions
+- Drop legacy `sveltekit:*` attributes from TypeScript definitions
+- Ignore a11y warning
+
 ## [1.4.0](https://github.com/metonym/svelte-link/releases/tag/v1.4.0) - 2022-04-15
 
 - Add `sveltekit:reload` prop to TypeScript definitions
